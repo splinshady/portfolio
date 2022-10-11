@@ -1,0 +1,19 @@
+.about_me {
+    background-color: #fa9b9b;
+}
+
+.about_me__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.description {
+    display: inline-block;
+    font-size: 24px;
+    padding: 4px;
+}
+
+.photo {
+    height: 300px;
+}
