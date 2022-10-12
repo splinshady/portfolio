@@ -1,0 +1,39 @@
+.contacts {
+    background-color: #a9d7fd;
+}
+
+.contacts_container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.form {
+    display: flex;
+    flex-flow: column nowrap;
+    min-width: 50%;
+    gap: 30px;
+}
+
+.contacts_title {
+    font-size: 1.4em;
+    margin-bottom: 40px;
+    background-color: #b2fafa;
+}
+
+.form_button {
+    align-self: center;
+    width: 50px;
+}
+
+.input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width : 767px) {
+    .form {
+        width: 100%;
+    }
+}
