@@ -1,6 +1,5 @@
 import React from 'react';
 import style from "./Skills.module.css";
-import myPhoto from "../../../assets/me.jpg";
 import Skill from "./Skill";
 
 const Skills = () => {

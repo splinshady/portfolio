@@ -1,0 +1,32 @@
+.header {
+    background-color: white;
+    .header__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 30px;
+        padding-bottom: 70px;
+        .logo {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+        }
+        .navigation {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 40px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            span {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .navigation {
+        padding: 5px 5px;
+    }
+}
