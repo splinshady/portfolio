@@ -3,6 +3,7 @@
 .about_me {
     color: $textColorPrimary;
     padding-bottom: 140px;
+    background-color: $textColorSecondary;
 
     .about_me_container {
         display: flex;
@@ -34,10 +35,8 @@
                 font-weight: 500;
             }
 
-            .social_block {
-                display: flex;
+            .social_container {
                 margin-top: 30px;
-                gap: 20px;
             }
         }
 

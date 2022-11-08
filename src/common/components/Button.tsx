@@ -8,9 +8,10 @@ type SuperButtonPropsType = DefaultButtonPropsType & {
     title: string
     primary?: boolean
     secondary?: boolean
+    type?: string
 }
 
-export const Button: React.FC<SuperButtonPropsType> = ({primary, className, secondary, ...restProps}) => {
+export const Button: React.FC<SuperButtonPropsType> = ({type,primary, className, secondary, ...restProps}) => {
     let finalClassName = `${primary && style.button_primary} 
                           ${className} 
                           ${style.button}
@@ -18,6 +19,6 @@ export const Button: React.FC<SuperButtonPropsType> = ({primary, className, seco
     finalClassName = `${restProps.disabled ? style.disabled : finalClassName} ${style.button}`
 
     return (
-        <button className={finalClassName}{...restProps}>{restProps.title}</button>
+        <button type={type} className={finalClassName}{...restProps}>{restProps.title}</button>
     )
 }

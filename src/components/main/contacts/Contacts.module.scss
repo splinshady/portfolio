@@ -1,0 +1,48 @@
+@import "../../../common/styles/mixins";
+@import "../../../common/styles/variables";
+
+.contacts {
+    background-color: $textColorSecondary;
+
+    .contacts_container {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        padding-top: 140px;
+        padding-bottom: 70px;
+
+        .contacts_title {
+            @include title-text;
+            margin-bottom: 50px;
+        }
+
+        .form {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: flex-start;
+            gap: 20px;
+
+            .form_button {
+            }
+        }
+    }
+}
+
+.input {
+    min-width: 300px;
+    min-height: 50px;
+}
+
+.textarea {
+    width: 500px;
+    min-height: 150px;
+}
+
+@media screen and (max-width: 767px) {
+    .form {
+        width: 100%;
+        .textarea {
+            width: 100%;
+        }
+    }
+}
