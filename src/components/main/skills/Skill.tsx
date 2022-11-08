@@ -1,11 +1,23 @@
 import React from 'react';
-import style from './Skills.module.css';
+import style from './Skills.module.scss';
+import {ReactComponent as ReactLogo} from '../../../assets/icons/react-ico.svg';
 
-const Skill = () => {
+
+type SkillsPropsType = {
+    title: string
+    description: string
+}
+
+const Skill: React.FC<SkillsPropsType> = ({title, description}) => {
     return (
         <article className={style.skill}>
-            <h4 className={style.skill_name}>React</h4>
-            <p className={style.skill_description}>Skill description skill description skill description skill description skill description skill description</p>
+            <div className={style.skill_container}>
+                <div className={style.skill_title_container}>
+                    <ReactLogo className={style.skill_icon}/>
+                    <h4 className={style.skill_title}>{title}</h4>
+                </div>
+                <p className={style.skill_description}>{description}</p>
+            </div>
         </article>
     );
 };

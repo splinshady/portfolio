@@ -7,10 +7,14 @@ type DefaultButtonPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonE
 type SuperButtonPropsType = DefaultButtonPropsType & {
     title: string
     primary?: boolean
+    secondary?: boolean
 }
 
-export const Button: React.FC<SuperButtonPropsType> = ({primary, className, ...restProps}) => {
-    let finalClassName = `${primary && style.button_primary} ${className} ${style.button}`
+export const Button: React.FC<SuperButtonPropsType> = ({primary, className, secondary, ...restProps}) => {
+    let finalClassName = `${primary && style.button_primary} 
+                          ${className} 
+                          ${style.button}
+                          ${secondary && style.button_secondary}`
     finalClassName = `${restProps.disabled ? style.disabled : finalClassName} ${style.button}`
 
     return (

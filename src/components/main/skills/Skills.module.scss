@@ -1,0 +1,76 @@
+@import "../../../common/styles/mixins";
+@import "../../../common/styles/variables";
+
+.skills {
+    background-color: $textColorSecondary;
+    padding-bottom: 140px;
+    color: $textColorPrimary;
+
+    .skills_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .section_title {
+            @include title-text;
+            align-self: flex-start;
+            margin-bottom: 40px;
+        }
+
+        .skills_cards {
+            display: flex;
+            justify-content: center;
+            flex-flow: row wrap;
+            gap: 30px;
+        }
+    }
+
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
+    height: 210px;
+    border: 1px solid $colorPrimary;
+    border-radius: 20px;
+    background: linear-gradient(106.73deg, $textColorSecondary, $textColorSecondary, $textColorSecondary);
+    transition: background 2s ease;
+
+    .skill_container {
+        padding: 30px;
+        .skill_title_container {
+            display: flex;
+            margin-bottom: 15px;
+            .skill_icon path {
+                fill: $textColorPrimary;
+            }
+            .skill_title {
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 22px;
+                margin-left: 5px;
+            }
+        }
+
+        .skill_description {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 140%;
+            color: $textColorSecondary;
+        }
+    }
+
+    &:hover {
+        background: linear-gradient(106.73deg, #07133F 3.01%, #2A1FA8 47.61%, #0684A9 99.23%);
+        box-shadow: 0px 4px 15px rgba(15, 15, 15, 0.15);
+        border: 1px solid transparent;
+        color: $textColorSecondary;
+        transition: background 2s ease;
+        .skill_icon path {
+            fill: $textColorSecondary !important;
+        }
+    }
+
+}

@@ -1,0 +1,51 @@
+@import "../../../common/styles/mixins";
+@import "../../../common/styles/variables";
+
+.projects {
+    background-color: $textColorSecondary;
+
+    .projects_container {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 140px;
+
+        .projects_title {
+            @include title-text;
+            margin-bottom: 60px;
+            align-self: flex-start;
+        }
+
+        .projects_cards {
+            display: flex;
+            justify-content: flex-start;
+            flex-flow: row wrap;
+            gap: 75px;
+        }
+    }
+}
+
+.project_container {
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 350px;
+    gap: 15px;
+
+    .project_name {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .project_description {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+@media screen and (max-width : 1220px) {
+    .projects_cards {
+        display: flex;
+        justify-content: center !important;
+    }
+}

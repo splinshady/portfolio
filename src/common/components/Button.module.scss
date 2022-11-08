@@ -15,11 +15,21 @@
     font-size: 16px;
     line-height: 19px;
     cursor: pointer;
+    width: fit-content;
 }
 
 .button_primary {
     background-color: $colorPrimary;
     color: $textColorSecondary;
+}
+
+.button_secondary {
+    border: 2px solid $colorPrimary;
+    color: $colorPrimary;
+    padding: 16px 50px 16px 20px;
+    background-image: url("../../assets/icons/Vector.svg");
+    background-repeat: no-repeat;
+    background-position: 85% 50%;
 }
 
 .disabled {
