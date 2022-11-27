@@ -13,34 +13,76 @@
 
         .contacts_title {
             @include title-text;
-            margin-bottom: 50px;
+            margin-bottom: 10px;
+        }
+
+        .contacts_sub_title {
+            color: gray;
+            margin-bottom: 40px;
         }
 
         .form {
             display: flex;
             flex-flow: column nowrap;
             align-items: flex-start;
-            gap: 20px;
+            gap: 50px;
+            width: 480px;
 
-            .form_button {
+            .input_container {
+                width: 100%;
+                position: relative;
+
+                .input {
+                    all: unset;
+                    width: 100%;
+                    border-bottom: 1px solid gray;
+                    padding-bottom: 5px;
+                }
+
+                .input_error {
+                    color: $textColorError;
+                    border-bottom: 1px solid $textColorError;
+
+                    &::placeholder {
+                        color: $textColorError;
+                    }
+                }
+
+                .textarea {
+                    all: unset;
+                    width: 100%;
+                    min-height: 100px;
+                    max-height: 300px;
+                    border: 1px solid gray;
+                    padding: 5px;
+                    box-sizing: border-box;
+                }
+
+                .textarea_error {
+                    color: $textColorError;
+                    border: 1px solid $textColorError;
+
+                    &::placeholder {
+                        color: $textColorError;
+                    }
+                }
+
+                .error {
+                    font-size: 0.7em;
+                    position: absolute;
+                    left: 0;
+                    bottom: -17px;
+                    color: $textColorError;
+                }
             }
         }
     }
 }
 
-.input {
-    min-width: 300px;
-    min-height: 50px;
-}
-
-.textarea {
-    width: 500px;
-    min-height: 150px;
-}
-
 @media screen and (max-width: 767px) {
     .form {
         width: 100%;
+
         .textarea {
             width: 100%;
         }
